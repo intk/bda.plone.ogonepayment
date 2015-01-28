@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records interface="bda.plone.ogonepayment.IOgonePaymentSettings">
+    <value key="ogone_server_url" purge="false">https://secure.ogone.com/ncol/test/orderstandard.asp</value>
+    <value key="ogone_sha_in_password" purge="false">SHAin</value>
+    <value key="ogone_sha_out_password" purge="false">SHAout</value>
+  </records>
+
+</registry>
