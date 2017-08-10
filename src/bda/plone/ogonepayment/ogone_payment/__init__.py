@@ -33,7 +33,7 @@ logger = logging.getLogger('bda.plone.payment')
 _ = MessageFactory('bda.plone.payment')
 
 CREATE_PAY_INIT_URL = "https://secure.ogone.com/ncol/test/orderstandard.asp"
-PSPID = "pspid"
+PSPID = "pspidd"
 SHA_IN_PASSWORD = "pwd"
 SHA_OUT_PASSWORD = "pwd"
 
