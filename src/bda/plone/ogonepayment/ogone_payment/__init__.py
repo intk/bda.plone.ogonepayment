@@ -27,6 +27,7 @@ from ZTUtils import make_query
 from bda.plone.orders.common import get_order
 
 from security import OgoneSignature
+import transaction
 
 logger = logging.getLogger('bda.plone.payment')
 _ = MessageFactory('bda.plone.payment')
@@ -52,7 +53,6 @@ def shopmaster_mail(context):
     return props.site_properties.email_from_address
 
 def perform_request(url, params=None):
-    
     if params:
         query = urllib.urlencode(params)
         url = '%s?%s' % (url, query)
@@ -91,7 +91,7 @@ class OgonePay(BrowserView):
             description = data['description']
             ordernumber = data['ordernumber']
 
-            accepturl = "http://webshop-plone.intk.com/ogone_payment_success"
+            accepturl = "http://plone5.intk.com/Plone/ogone_payment_success"
 
             declineurl = '%s/@@ogone_payment_failed?uid=%s' % (base_url, order_uid)
             exceptionurl = '%s/@@ogone_payment_failed?uid=%s' % (base_url, order_uid)

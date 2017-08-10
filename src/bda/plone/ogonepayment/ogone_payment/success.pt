@@ -38,11 +38,8 @@
         <p>
           <span i18n:translate="six_payment_verification_failed">
             Something nasty is going on. Payment verification failed.
-            If you think the failure remains on our side, please contact
+            If you think the failure remains on our side, please contact us
           </span>
-          <a href="mailto:shopmaster@example.com"
-             tal:attributes="href string:mailto:${view/shopmaster_mail}"
-             i18n:translate="us">us</a>
         </p>
       
       </tal:verification_failed>
